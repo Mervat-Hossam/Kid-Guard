@@ -1,0 +1,143 @@
+.header{
+    margin: 0px auto;
+    padding: 22px 12px;
+    min-height: 80px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--basic-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+.header .logo h1{
+    color: #333333;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 35px;
+    position: relative;
+}
+.header .nav ul{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.header .nav ul li a{
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+    transition: all 0.35s;
+}
+.header nav ul li a:hover{
+    color: var(--text-hover);
+}
+.header .header-right{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header .header-right input{
+    font-size: 18px;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+.login{
+    background-color: #fff;
+    color: #2D5A4A;
+    border: 2px solid #2D5A4A;
+}
+.login:hover{
+    background-color: #2D5A4A;
+    border-color: #2D5A4A;
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+    }
+
+    .header .active {
+        padding: 0px 10px 15px;
+        width: 45%;
+        display: flex;
+        color: #666666;
+        background-color: #ffffff;
+        border: 2px solid #8d8c8c;
+        border-radius: 12px;
+        box-shadow: var(--basic-shadow);
+        position: absolute;
+        top: 45px;
+        right: 62px;
+        z-index: 100;
+    }
+    .header .active ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .header .active ul li {
+        padding: 15px 10px;
+        width: 100%;
+        border-bottom: 1px solid #8d8c8c;
+        text-align: center; 
+    }
+    .header .active ul li a{     
+        font-size: 18px;
+    }
+    .hamburger {
+        display: block;
+        right: 20px;
+    }
+}
+@media (max-width: 432px) {
+    .header .logo{
+        gap: 8px;
+    }
+    .header .logo img{
+        width: 40px;
+    }
+    .header .logo h1{
+        font-size: 25px;
+    }
+    .hamburger{
+        font-size: 2;
+    }
+    .header .active .header-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header .active ul li a{     
+        font-size: 16px;
+    }
+    .active button {
+        box-shadow: none;
+        font-size: 16px;
+    }
+}
