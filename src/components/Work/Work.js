@@ -1,7 +1,7 @@
-import work1 from '../assets/work1.png';
-import work2 from '../assets/work2.png';
-import work3 from '../assets/work3.png';
-import arrow from '../assets/arrow.png'
+import work1 from '../../assets/work1.png';
+import work2 from '../../assets/work2.png';
+import work3 from '../../assets/work3.png';
+import arrow from '../../assets/arrow.png'
 import './Work.css';
 
 export default function Work(){

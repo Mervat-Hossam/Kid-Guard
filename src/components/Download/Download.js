@@ -1,5 +1,5 @@
-import googlePlay from '../assets/google-play.png';
-import appStore from '../assets/app-store.png';
+import googlePlay from '../../assets/google-play.png';
+import appStore from '../../assets/app-store.png';
 import './Download.css';
 
 export default function Download(){

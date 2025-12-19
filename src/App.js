@@ -1,21 +1,20 @@
-import './components/Header';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features'
-import Work from './components/Work';
-import Download from './components/Download';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Hero/>
-      <Features/>
-      <Work/>
-      <Download/>
-      <Footer/>
-    </div>
+    <BrowserRouter basename="/Kid-Guard">
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

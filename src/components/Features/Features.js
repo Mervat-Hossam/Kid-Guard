@@ -1,7 +1,7 @@
-import feature1 from '../assets/feature1.png';
-import feature2 from '../assets/feature2.png';
-import feature3 from '../assets/feature3.png';
-import feature4 from '../assets/feature4.png';
+import feature1 from '../../assets/feature1.png';
+import feature2 from '../../assets/feature2.png';
+import feature3 from '../../assets/feature3.png';
+import feature4 from '../../assets/feature4.png';
 import './Features.css';
 
 export default function Features(){

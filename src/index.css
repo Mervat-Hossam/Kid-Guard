@@ -2,6 +2,7 @@
   --basic-padding: 11px 8px;
   --basic-color: #F3FAF5;
   --secondary-color: #FEFBF2;
+  --login-color: #FCF1D4;
   --footer-color: #F4F7FA;
   --text-hover: #A4DB9D;
   --btn-color: #A4DB9D;
@@ -10,6 +11,7 @@
   --basic-shadow: 0px 4px 25px 0px #00000040;
   --img-shadow: 0px 4px 20px 0px #00000040;
   --border-color: rgba(20, 20, 30, 0.06);
+  --feilds-color: #DDEEFF;
 }
 *{
   margin: 0;
@@ -24,6 +26,13 @@ body{
   min-height: 100svh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--basic-color);
+}
+body.login-and-sign-body {
+  height: 100%;
+  background-color: var(--login-color);
+}
+section {
+  scroll-margin-top: 120px;
 }
 button{
   padding: var(--btn-padding);
@@ -47,4 +56,19 @@ h2 {
 p { 
   font-size: 20px;
   color: #555555;
+}
+.login-btn{
+  width: 100%;
+  height: 53px;
+  border-radius: 12px;
+  background-color: #66D458;
+  border-color: #66D458;
+  box-shadow: 1px 1px 10px 0px #00000040;
+  font-size: 20px;
+  font-weight: bold;
+}
+.login-btn:hover {
+  background-color: #5AC24E;
+  border: #5AC24E;
+  color: white;
 }
