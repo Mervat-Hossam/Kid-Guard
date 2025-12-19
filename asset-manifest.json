@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kid-Guard/static/css/main.1d5b5e34.css",
-    "main.js": "/Kid-Guard/static/js/main.73bd06a9.js",
+    "main.css": "/Kid-Guard/static/css/main.4b90c7c7.css",
+    "main.js": "/Kid-Guard/static/js/main.f1e1d990.js",
     "static/js/453.9bf34063.chunk.js": "/Kid-Guard/static/js/453.9bf34063.chunk.js",
     "static/media/hero2.jpg": "/Kid-Guard/static/media/hero2.6537cba12ec48442d084.jpg",
     "static/media/hero1.jpg": "/Kid-Guard/static/media/hero1.f44b103a3cf3ad07fbca.jpg",
@@ -10,12 +10,12 @@
     "static/media/arrow.png": "/Kid-Guard/static/media/arrow.08cc31d1be816362265a.png",
     "static/media/work2.png": "/Kid-Guard/static/media/work2.38693b7201c19e205f93.png",
     "index.html": "/Kid-Guard/index.html",
-    "main.1d5b5e34.css.map": "/Kid-Guard/static/css/main.1d5b5e34.css.map",
-    "main.73bd06a9.js.map": "/Kid-Guard/static/js/main.73bd06a9.js.map",
+    "main.4b90c7c7.css.map": "/Kid-Guard/static/css/main.4b90c7c7.css.map",
+    "main.f1e1d990.js.map": "/Kid-Guard/static/js/main.f1e1d990.js.map",
     "453.9bf34063.chunk.js.map": "/Kid-Guard/static/js/453.9bf34063.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d5b5e34.css",
-    "static/js/main.73bd06a9.js"
+    "static/css/main.4b90c7c7.css",
+    "static/js/main.f1e1d990.js"
   ]
 }
