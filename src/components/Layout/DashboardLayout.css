@@ -1,0 +1,57 @@
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+
+  /* background: #eef2f7; زي الصورة */
+  background-color: var(--basic-color);
+  font-family: system-ui;
+}
+
+.main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding-bottom: 70px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+
+.card {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 16px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  border: 1px solid #f1f5f9;
+}

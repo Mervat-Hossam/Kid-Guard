@@ -1,0 +1,315 @@
+/* page */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* header */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  /* color: #0f172a; */
+  color: #333333;
+
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  /* color: #64748b; */
+  color: #333333;
+  font-size: 16px;
+}
+
+/* info */
+
+.dashboard-info {
+  display: flex;
+  gap: 16px;
+}
+
+.info-box {
+  /* background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  ); */
+  background-color: #2D5A4A;
+
+  color: white;
+
+  padding: 20px 28px;
+
+  border-radius: 20px;
+
+  min-width: 180px;
+/* 
+  box-shadow:
+    0 10px 24px rgba(37, 99, 235, 0.22); */
+    
+  box-shadow: 0 10px 24px #2d5a4ac2;
+}
+
+.info-box h3 {
+  font-size: 15px;
+  font-weight: 500;
+
+  opacity: 0.9;
+
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+/* grid */
+
+.watch-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 24px;
+}
+
+/* card */
+
+.watch-card {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  /* border: 1px solid #e2e8f0; */
+  border: 1px solid var(--border-color);
+
+  box-shadow:
+    0 4px 20px rgba(15, 23, 42, 0.05);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+.watch-card:hover {
+  transform: translateY(-5px);
+/* 
+  box-shadow:
+    0 14px 34px rgba(15, 23, 42, 0.08); */
+    
+  box-shadow: 0 14px 34px #a5b4aec2;
+}
+
+
+.watch-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 24px;
+}
+
+.watch-top h2 {
+  font-size: 22px;
+  /* color: #0f172a; */
+  color: #333333;
+
+  margin-bottom: 10px;
+}
+
+/* live */
+
+.live-status {
+  background: #dcfce7;
+  color: #16a34a;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* battery */
+
+.battery-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  /* background: #eff6ff; */
+  /* color: #2563eb; */
+  background-color: var(--basic-color);
+  color: #333333;
+
+  padding: 12px 16px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* stats */
+
+.watch-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* items */
+
+.stat-item {
+  /* background: #f8fafc; */
+  background-color: var(--basic-color);
+
+  /* border: 1px solid #e2e8f0; */
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+
+  padding: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.stat-item:hover {
+  /* background: #eff6ff;
+  border-color: #bfdbfe; */
+  background-color: var(--secondary-color);
+  border-color: var(--login-color);
+}
+
+.stat-item span {
+  /* color: #64748b; */
+  color: #333333;
+  font-size: 15px;
+}
+
+.stat-item strong {
+  /* color: #0f172a; */
+  color: #333333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* footer */
+
+.watch-footer {
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  /* border-top: 1px solid #e2e8f0; */
+  border-top: 1px solid var(--btn-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* color: #64748b; */
+  color: #333333;
+
+  font-size: 14px;
+}
+
+.watch-footer strong {
+  /* color: #0f172a; */
+  color: #2D5A4A;
+}
+
+/* no watches*/
+
+.empty-box {
+  background: white;
+
+  padding: 50px 30px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  /* border: 1px solid #e2e8f0; */
+  border: 1px solid var(--btn-color);
+/* 
+  box-shadow:
+    0 4px 16px rgba(15, 23, 42, 0.04); */
+  box-shadow: 0 10px 24px #2d5a4ac2;
+}
+
+.empty-box h2 {
+  /* color: #0f172a; */
+  color: #333333;
+
+  margin-bottom: 12px;
+}
+
+.empty-box p {
+  /* color: #64748b; */
+  color: #333333;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  .watch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-card {
+    padding: 20px;
+  }
+
+  .watch-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .watch-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+

@@ -1,4 +1,4 @@
-/* :root{
+:root{
   --basic-padding: 11px 8px;
   --basic-color: #F3FAF5;
   --secondary-color: #FEFBF2;
@@ -89,4 +89,4 @@ p {
   transform: translateY(-50%);
   cursor: pointer;
   color: #555;
-} */
+}

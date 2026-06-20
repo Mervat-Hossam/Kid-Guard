@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import "./Signup.css"
 
@@ -10,6 +11,8 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
 
 export default function Signup() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.body.classList.add("login-and-sign-body");
 
@@ -21,9 +24,11 @@ export default function Signup() {
   const [fullName, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [confirmPass, setConfirmPass] = useState("");
+  const [showConfirm, setShowConfirm] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     let errors = [];
@@ -56,11 +61,49 @@ export default function Signup() {
       });
       return;
     }
-    
-    Swal.fire({
-      icon: "success",
-      title: "Registration completed successfully",
-    });
+
+    try {
+      const response = await fetch(
+        "https://kidsguard-production.up.railway.app/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: fullName,
+            email,
+            password,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        Swal.fire({
+          icon: "error",
+          title: "Signup failed",
+          text: data.message || "Email already exists",
+        });
+        return;
+      }
+
+      Swal.fire({
+        icon: "success",
+        title: "Account created successfully",
+      }).then(() => {
+        navigate("/dashboard");
+      });
+
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Server error",
+        text: "Please try again later",
+      });
+    }
+
   };
 
 
@@ -87,21 +130,50 @@ export default function Signup() {
           />
 
           <label>Password</label>
-          <input
+          {/* <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
+          /> */}
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
 
           <label>Confirm Password</label>
-          <input
+          {/* <input
             type="password"
             value={confirmPass}
             onChange={(e) => setConfirmPass(e.target.value)}
             required
-          />
+          /> */}
+          <div className="password-wrapper">
+            <input
+              type={showConfirm ? "text" : "password"}
+              value={confirmPass}
+              onChange={(e) => setConfirmPass(e.target.value)}
+              required
+            />
 
+            <span
+              className="toggle-password"
+              onClick={() => setShowConfirm(!showConfirm)}
+            >
+              {showConfirm ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
           <button type="submit" className="login-btn">
             Sign Up
           </button>

@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 
-export default function Header() {
+export default function Header({ user }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,6 +25,9 @@ export default function Header() {
       });
     }
   };
+
+
+  const isDashboard = location.pathname.startsWith("/dashboard");
 
   return (
     <header className="header">
@@ -62,13 +65,19 @@ export default function Header() {
          </ul>
 
         <div className="header-right">
-          <Link to="/login" onClick={() => setMenuOpen(false)}>
-            <button className="login">Login</button>
-          </Link>
+          {isDashboard || user ? (
+            <span className="user-name">Hello, {user?.name || "Mai"}</span>
+          ) : (
+            <>
+              <Link to="/login" onClick={() => setMenuOpen(false)}>
+                <button className="login">Login</button>
+              </Link>
 
-          <Link to="/signup" onClick={() => setMenuOpen(false)}>
-            <button className="sign-up">Sign Up</button>
-          </Link>
+              <Link to="/signup" onClick={() => setMenuOpen(false)}>
+                <button className="sign-up">Sign Up</button>
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </header>

@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Hero from "../components/Hero/Hero";
-import Features from "../components/Features/Features";
-import Work from "../components/Work/Work";
-import Download from "../components/Download/Download";
-import Footer from "../components/Footer/Footer";
+import Hero from "../../components/Hero/Hero";
+import Features from "../../components/Features/Features";
+import Work from "../../components/Work/Work";
+import Download from "../../components/Download/Download";
+import Footer from "../../components/Footer/Footer";
+
+import "./Landing.css"
 
 export default function Landing(){
      const location = useLocation();
