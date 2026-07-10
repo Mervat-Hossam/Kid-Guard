@@ -7,8 +7,8 @@ export default function Download(){
         <div className='download-section'>
             <h2>Download Now</h2>
             <div className='download-way'>
-                <a href=''><img src={googlePlay} alt='Google-Play'/></a>
-                <a href=''><img src={appStore} alt='App-Store'/></a>
+                <a href='https://play.google.com/store/apps'><img src={googlePlay} alt='Google-Play'/></a>
+                <a href='https://www.apple.com/app-store/'><img src={appStore} alt='App-Store'/></a>
             </div>
         </div>
     );

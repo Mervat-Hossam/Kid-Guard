@@ -125,12 +125,12 @@ const [preview, setPreview] =
 
   await logout();
 
-  localStorage.clear(); // 👈 مهم جدًا
+  localStorage.clear(); 
 
-  window.location.replace("/Kid-Guard/login"); // 👈 أفضل من href
+  window.location.replace("/Kid-Guard/login"); 
 };
 
-  // 🔥 DELETE ACCOUNT
+  // DELETE ACCOUNT
   const handleDeleteAccount =
     async () => {
 

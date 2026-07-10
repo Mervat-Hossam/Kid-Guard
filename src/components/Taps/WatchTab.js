@@ -14,7 +14,7 @@ import "./WatchTab.css";
 export default function WatchTab({ user }) {
 
   const [serials, setSerials] = useState([]);
-  const [childName, setChildName] = useState("");
+  const [setChildName] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
   const [selectedSerial, setSelectedSerial] = useState(null);
   const [watchInfo, setWatchInfo] = useState(null);

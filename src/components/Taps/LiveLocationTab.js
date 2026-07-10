@@ -38,7 +38,7 @@ export default function LiveLocationTab({ user }) {
 
   const colors = ["red", "blue", "green", "orange", "violet"];
 
-  // 🎨 Icon
+  // Icon
   const getIcon = (color) =>
     new L.Icon({
       iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-${color}.png`,
@@ -97,7 +97,7 @@ export default function LiveLocationTab({ user }) {
     });
   }, [allWatches]);
 
-  // حماية من الفشل
+  // protect from failure
   if (!allWatches.length || !allWatches[0]?.latitude) {
     return <h2>Loading map...</h2>;
   }
