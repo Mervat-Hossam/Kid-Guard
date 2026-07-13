@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
-import { logout } from "../../Services/authService";
+import { logout } from "../../../Services/authService";
 import "./Topbar.css";
-import logo from "../../assets/logo.png"
+import logo from "../../../assets/logo.png"
 
 export default function Topbar({ user, setSidebarOpen }) {
 

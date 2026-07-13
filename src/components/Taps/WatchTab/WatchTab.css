@@ -17,14 +17,12 @@
 /* headings */
 .watch-page h1 {
   font-size: 32px;
-  /* color: #1e293b; */
   color: #333333;
   margin-bottom: 10px;
 }
 
 .watch-page h2 {
   font-size: 22px;
-  /* color: #334155; */
   color: #333333;
   margin-bottom: 20px;
 }
@@ -36,7 +34,6 @@
   justify-content: space-between;
   padding: 14px 18px;
   margin-bottom: 14px;
-  /* background: #f8fafc; */
   background-color: var(--basic-color);
   border: 2px solid transparent;
   border-radius: 14px;
@@ -44,15 +41,11 @@
 }
 
 .child-box:hover {
-  /* border-color: #3b82f6; */
   border-color: var(--border-color);
-  /* background: #eff6ff; */
 }
 
 .child-box.active {
-  /* border-color: #2563eb; */
   border-color: #2D5A4A;
-  /* background: #dbeafe; */
 
 }
 
@@ -60,7 +53,6 @@
 .child-box span {
   font-size: 17px;
   font-weight: 600;
-  /* color: #1e293b; */
   color: #333333;
   cursor: pointer;
 }
@@ -93,7 +85,6 @@
   margin-top: 14px;
   padding: 14px 16px;
   border-radius: 12px;
-  /* border: 1px solid #cbd5e1; */
   border: 1px solid var(--border-color);
   font-size: 15px;
   outline: none;
@@ -101,46 +92,32 @@
 }
 
 .watch-page input:focus {
-  /* border-color: #2563eb; */
   border-color: var(--btn-color);
-  /* box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12); */
   box-shadow: var(--basic-shadow);
 }
 
 /* add button*/
 .watch-page .add-btn {
   margin-top: 18px;
-
   width: 100%;
   padding: 14px;
-
   border: none;
   border-radius: 14px;
-
-  /* background: linear-gradient(
-    135deg,
-    #3b82f6,
-    #2563eb
-  ); */
   background-color: var(--btn-color);
-
   color: white;
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
   transition: 0.3s;
 }
 
 .watch-page .add-btn:hover {
   transform: translateY(-2px);
-  /* box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); */
   box-shadow: var(--img-shadow);
 }
 
 /* responsive */
 @media (max-width: 768px) {
-
   .watch-page h1 {
     font-size: 26px;
   }

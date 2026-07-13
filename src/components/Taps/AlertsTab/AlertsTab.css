@@ -1,5 +1,4 @@
 /* page */
-
 .alerts-page {
   display: flex;
   flex-direction: column;
@@ -7,56 +6,39 @@
 }
 
 /* headings */
-
 .alerts-page h1 {
   font-size: 32px;
   font-weight: 700;
-
   color: #0f172a;
 }
 
 /* Alerts Grid */
-
 .alerts-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(320px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
 /* Watch Card */
-
 .watch-alerts {
   background: white;
-
   border-radius: 24px;
-
   padding: 24px;
-
   border: 1px solid #e2e8f0;
-
-  box-shadow:
-    0 8px 24px rgba(15, 23, 42, 0.05);
-
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
   transition: 0.3s ease;
 }
 
 .watch-alerts:hover {
   transform: translateY(-5px);
-
-  box-shadow:
-    0 14px 32px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
 }
 
 /* header */
-
 .watch-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 20px;
 }
 
@@ -66,30 +48,21 @@
 }
 
 /* Live */
-
 .live-status {
   background: #dcfce7;
   color: #16a34a;
-
   padding: 6px 14px;
-
   border-radius: 999px;
-
   font-size: 13px;
   font-weight: 600;
 }
 
 /* Alert Card */
-
 .alert-card {
   border-radius: 18px;
-
   padding: 18px;
-
   margin-bottom: 16px;
-
   border: 1px solid transparent;
-
   transition: 0.3s ease;
 }
 
@@ -104,47 +77,34 @@
 }
 
 /* Danger */
-
 .alert-card.danger {
   background: #fef2f2;
   border-color: #fecaca;
-
   color: #b91c1c;
 }
 
 /* Warning */
-
 .alert-card.warning {
   background: #fff7ed;
   border-color: #fed7aa;
-
   color: #c2410c;
 }
 
 /* Success */
-
 .alert-card.success {
   background: #f0fdf4;
   border-color: #bbf7d0;
-
   color: #15803d;
 }
 
 /*  Info */
-
 .alert-card.info {
-  /* background: #eff6ff;
-  border-color: #bfdbfe;
-
-  color: #1d4ed8; */
   background: var(--basic-color);
   border-color: var(--btn-color);
   color: #2D5A4A;
-
 }
 
 /* Zones */
-
 .zones-section {
   display: flex;
   flex-direction: column;
@@ -157,57 +117,40 @@
 }
 
 /* Zones Grid */
-
 .zones-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(260px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
 /* Zone Card */
-
 .zone-card {
   background: white;
-
   border-radius: 22px;
-
   padding: 22px;
-
   border: 1px solid #e2e8f0;
-
-  box-shadow:
-    0 6px 18px rgba(15, 23, 42, 0.05);
-
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
   transition: 0.3s ease;
 }
 
 .zone-card:hover {
   transform: translateY(-4px);
-
-  box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
 }
 
 .zone-card h3 {
   font-size: 18px;
   color: #2563eb;
-
   margin-bottom: 14px;
 }
 
 .zone-card p {
   color: #475569;
-
   margin-bottom: 8px;
-
   font-size: 15px;
 }
 
 /* Responsive */
-
 @media (max-width: 992px) {
 
   .alerts-grid,

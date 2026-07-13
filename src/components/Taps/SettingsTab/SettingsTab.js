@@ -5,10 +5,10 @@ import Swal from "sweetalert2";
 import {
   updateUser,
   deleteAccount,
-} from "../../Services/userService";
+} from "../../../Services/userService";
 
 import { logout }
-from "../../Services/authService";
+from "../../../Services/authService";
 
 import "./SettingsTab.css";
 
@@ -17,33 +17,20 @@ export default function SettingsTab({
 }) {
 
   // USER INFO
-  const [name, setName] =
-    useState(user?.name || "");
+  const [name, setName] = useState(user?.name || "");
 
-  const [email, setEmail] =
-    useState(user?.email || "");
+  const [email, setEmail] = useState(user?.email || "");
 
-  // const [photoUrl,
-  //   setPhotoUrl] =
-  //   useState(user?.photoUrl || "");
-  const [photo, setPhoto] =
-  useState(null);
+  const [photo, setPhoto] = useState(null);
 
-const [preview, setPreview] =
-  useState(user?.photoUrl || "");
+const [preview, setPreview] = useState(user?.photoUrl || "");
 
   // PASSWORD
-  const [currentPassword,
-    setCurrentPassword] =
-    useState("");
+  const [currentPassword, setCurrentPassword] = useState("");
 
-  const [newPassword,
-    setNewPassword] =
-    useState("");
+  const [newPassword, setNewPassword] = useState("");
 
-  const [confirmPassword,
-    setConfirmPassword] =
-    useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleImageChange =
   (e) => {
@@ -112,13 +99,13 @@ const [preview, setPreview] =
       });
     };
 
-  const handleLogout = async () => {
-  const result = await Swal.fire({
-    title: "Logout?",
-    text: "You will need to login again",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonText: "Logout",
+    const handleLogout = async () => {
+    const result = await Swal.fire({
+      title: "Logout?",
+      text: "You will need to login again",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Logout",
   });
 
   if (!result.isConfirmed) return;

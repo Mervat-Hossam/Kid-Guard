@@ -23,9 +23,9 @@ import "leaflet/dist/leaflet.css";
 
 import { useEffect, useState } from "react";
 
-import { getWatchData } from "../../Services/watchService";
-import { getZones } from "../../Services/zoneService";
-import { getPlaceName } from "../../Services/locationService";
+import { getWatchData } from "../../../Services/watchService";
+import { getZones } from "../../../Services/zoneService";
+import { getPlaceName } from "../../../Services/locationService";
 
 import "./LiveLocationTab.css";
 

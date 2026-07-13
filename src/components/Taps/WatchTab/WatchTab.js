@@ -7,7 +7,7 @@ import {
   linkWatch,
   getWatchData,
   unlinkWatch,
-} from "../../Services/watchService";
+} from "../../../Services/watchService";
 
 import "./WatchTab.css";
 

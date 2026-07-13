@@ -3,34 +3,16 @@
   position: fixed;
   width: 240px;
   height: 100vh;
-
-  /* background: linear-gradient(
-    180deg,
-    #3b82f6,
-    #1e40af
-  ); */
   background-color: #2D5A4A;;
-
   color: white;
-
   padding: 20px;
 }
 
-/* .sidebar .logo {
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 30px;
-} */
 .sidebar li {
   padding: 12px;
   border-radius: 10px;
-
   cursor: pointer;
-
-  /* color: rgba(255,255,255,0.85); */
   color: white;
-
   transition: 0.2s;
 }
 
@@ -41,30 +23,22 @@
 
 .sidebar li.active {
   background: white;
-  /* color: #1e40af; */
   color: #2D5A4A;;
-
   font-weight: 600;
 }
 
 .sidebar li.active::before {
   content: "";
   position: absolute;
-
   left: 0;
   top: 20%;
-
   width: 4px;
   height: 60%;
-
   background: white;
   border-radius: 4px;
 }
 
-
-
 @media (max-width: 768px) {
-
   .sidebar {
     position: fixed;
     left: -100%;

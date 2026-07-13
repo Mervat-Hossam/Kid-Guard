@@ -1,12 +1,12 @@
-import Sidebar from "./Sidebar/Sidebar";
-import Topbar from "./Topbar";
+import Sidebar from "../Sidebar/Sidebar";
+import Topbar from "../Topbar/Topbar";
 
-import OverviewTab from "../Taps/OverviewTab";
-import LiveLocationTab from "../Taps/LiveLocationTab";
-import AlertsTab from "../Taps/AlertsTab";
-import WatchTab from "../Taps/WatchTab";
-import ReportsTab from "../Taps/ReportsTab";
-import SettingsTab from "../Taps/SettingsTab";
+import OverviewTab from "../../Taps/OverviewTab/OverviewTab";
+import LiveLocationTab from "../../Taps/LiveLocationTab/LiveLocationTab";
+import AlertsTab from "../../Taps/AlertsTab/AlertsTab";
+import WatchTab from "../../Taps/WatchTab/WatchTab";
+import ReportsTab from "../../Taps/ReportsTab/ReportsTab";
+import SettingsTab from "../../Taps/SettingsTab/SettingsTab";
 
 import { useState } from "react";
 import "./DashboardLayout.css";

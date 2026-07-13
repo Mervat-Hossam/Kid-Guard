@@ -2,101 +2,65 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   width: 100%;
 }
 
 /* Title */
-
 .location-page h1 {
   font-size: 32px;
   font-weight: 700;
-
   color: #0f172a;
 }
 
 /* MAP */
-
 .map-container {
   width: 100%;
   height: 500px;
-
   border-radius: 24px;
-
   overflow: hidden;
-
-  /* border: 1px solid #e2e8f0; */
   border: 1px solid var(--border-color);
-
-  /* box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.08); */
   box-shadow: var(--basic-shadow);
 }
 
 /* INFO GRID */
-
 .location-info {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
 /* CARD */
-
 .info-card {
   background: white;
-
   border-radius: 22px;
-
   padding: 22px;
-
-  /* border: 1px solid #e2e8f0; */
   border: 1px solid var(--border-color);
-
-  /* box-shadow:
-    0 4px 18px rgba(15, 23, 42, 0.05); */
   box-shadow: var(--img-shadow);
-
   transition: 0.3s ease;
 }
 
 .info-card:hover {
   transform: translateY(-4px);
-
-  /* box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.08); */
   box-shadow: 0 10px 24px #2d5a4ac2;
 }
 
 /* CARD TITLE */
-
 .info-card h3 {
   font-size: 16px;
   font-weight: 600;
-
-  /* color: #2563eb; */
   color: #2D5A4A;
-
   margin-bottom: 12px;
 }
 
 /* CARD TEXT */
-
 .info-card p {
-  /* color: #334155; */
   color: #333333;
-
   font-size: 15px;
-
   line-height: 1.6;
-
   word-break: break-word;
 }
 
-/* 🔥 POPUP */
+/* POPUP */
 
 .leaflet-popup-content-wrapper {
   border-radius: 16px;
@@ -108,18 +72,15 @@
   color: #0f172a;
 }
 
-/* 🔥 SAFE ZONES */
-
+/* SAFE ZONES */
 .leaflet-interactive {
   stroke: #2563eb;
   stroke-width: 2;
-
   fill: #3b82f6;
   fill-opacity: 0.15;
 }
 
-/* 📱 RESPONSIVE */
-
+/* RESPONSIVE */
 @media (max-width: 992px) {
 
   .map-container {
@@ -132,14 +93,12 @@
 }
 
 @media (max-width: 768px) {
-
   .location-info {
     grid-template-columns: 1fr;
   }
 
   .map-container {
     height: 350px;
-
     border-radius: 18px;
   }
 
@@ -153,7 +112,6 @@
 }
 
 @media (max-width: 480px) {
-
   .map-container {
     height: 300px;
   }

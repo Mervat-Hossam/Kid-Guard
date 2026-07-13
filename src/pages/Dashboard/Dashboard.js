@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCurrentUser } from "../../Services/userService";
 import { getWatchData } from "../../Services/watchService";
 
-import DashboardLayout from "../../components/Layout/DashboardLayout";
+import DashboardLayout from "../../components/Layout/DashboardLayout/DashboardLayout";
 
 import "./Dashboard.css"
 

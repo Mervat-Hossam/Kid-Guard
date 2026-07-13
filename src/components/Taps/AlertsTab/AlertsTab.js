@@ -9,7 +9,7 @@ import { MdWatch } from "react-icons/md"
 
 import { useEffect, useState } from "react";
 
-import { getZones, } from "../../Services/zoneService";
+import { getZones, } from "../../../Services/zoneService";
 
 import "./AlertsTab.css";
 
